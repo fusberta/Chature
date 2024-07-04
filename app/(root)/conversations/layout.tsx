@@ -4,7 +4,9 @@ type Props = React.PropsWithChildren<{}>
 
 const ConversationsLayout = ({ children }: Props) => {
     return (
-        { children }
+        <div>
+            {children}
+        </div>
     )
 }
 
