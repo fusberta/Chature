@@ -3,10 +3,10 @@ import { useMemo } from 'react'
 import { MessageSquare, Users } from 'lucide-react'
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon: React.ElementType;
-  active: boolean;
+  name: string
+  href: string
+  icon: React.ReactNode
+  active: boolean
 }
 
 export const useNavigation = (): NavigationItem[] => {
@@ -16,13 +16,13 @@ export const useNavigation = (): NavigationItem[] => {
     {
       name: "Conversations",
       href: "/conversations",
-      icon: MessageSquare,
+      icon: <MessageSquare />,
       active: pathname.startsWith("/conversations"),
     },
     {
       name: "Friends",
       href: "/friends",
-      icon: Users,
+      icon: <Users />,
       active: pathname === "/friends",
     },
   ], [pathname])
