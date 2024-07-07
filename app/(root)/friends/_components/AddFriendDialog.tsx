@@ -40,7 +40,6 @@ const AddFriendDialog = () => {
                 toast.success('Friend request sent')
             })
             .catch((error) => {
-                console.error(error)
                 toast.error(error instanceof ConvexError ? error.data : "Unexpected error occurred")
             })
     }
